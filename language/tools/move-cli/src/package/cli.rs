@@ -447,10 +447,10 @@ pub fn handle_package_commands(
 fn extract_named_address_values(
     resolution_graph: &ResolutionGraph<AccountAddress>,
 ) -> Vec<(String, NumericalAddress)> {
-    let rooot_package_name = &resolution_graph.root_package.package.name;
+    let root_package_name = &resolution_graph.root_package.package.name;
     let root_package = resolution_graph
         .package_table
-        .get(rooot_package_name)
+        .get(root_package_name)
         .expect("Failed to find root package in package table -- this should never happen");
 
     root_package
